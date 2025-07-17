@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+html {
+  min-width: 326px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(24, 49, 83, 0.831372549);
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
+  justify-content: space-between;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+main {
+  border: solid rgba(0, 187, 255, 0.7294117647) 2px;
+  height: calc(100dvh - 99px);
+  box-sizing: border-box;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 1fr 100px;
+  grid-gap: 10px;
+}
+
+header .title {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+}
+header .title h1 {
+  margin: 0;
+}
+header .title img {
+  width: 50px;
+}
+header .clean {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px;
+}
+header .clean button {
+  background-color: transparent;
+  padding: 5px;
+  transition: all 0.2s ease-in-out;
+  border: transparent solid 1px;
+  border-radius: 10px;
+  text-wrap: nowrap;
+}
+@media (hover: hover) and (pointer: fine) {
+  header .clean button:hover {
+    border: rgba(0, 187, 255, 0.7294117647) solid 1px;
+    cursor: pointer;
+  }
+  header .clean button:active {
+    scale: 0.95;
+  }
+}
+
+main .messageContainer {
+  box-sizing: border-box;
+  height: 100%;
+  border: #261854 solid 2px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  overflow-y: auto;
+  min-height: 0;
+  scroll-behavior: smooth;
+}
+main .messageContainer .right {
+  width: 50%;
+  align-self: end;
+  background-color: #261854;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+main .messageContainer .right p {
+  width: 90%;
+}
+main .messageContainer .left {
+  width: 50%;
+  align-self: flex-start;
+  background-color: rgba(0, 187, 255, 0.7294117647);
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+main .messageContainer .left p {
+  width: 90%;
+}
+main .mainForm {
+  height: 100px;
+  border: #261854 solid 2px;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #261854;
+  /* position: fixed;
+  width: 100%;
+  padding: 10px;
+  left: 0;
+  bottom: 10px; */
+}
+main .mainForm form {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-gap: 10px;
+  place-items: center;
+}
+main .mainForm label,
+main .mainForm input {
+  grid-column: 1/2;
+  width: 100%;
+}
+main .mainForm label {
+  text-wrap: nowrap;
+}
+main .mainForm input {
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgba(24, 49, 83, 0.4588235294);
+  color: #fff;
+  border: solid #fff 0.5px;
+  padding-left: 5px;
+}
+main .mainForm button {
+  grid-column: 2/3;
+  width: 70px;
+  background-color: transparent;
+  padding: 5px;
+  transition: all 0.2s ease-in-out;
+  border: transparent solid 1px;
+  border-radius: 10px;
+  border: rgba(0, 187, 255, 0.7294117647) solid 1px;
+}
+@media (hover: hover) and (pointer: fine) {
+  main .mainForm button:hover {
+    border: rgba(0, 187, 255, 0.7294117647) solid 1px;
+    cursor: pointer;
+  }
+  main .mainForm button:active {
+    scale: 0.95;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  main .mainForm button:hover {
+    background-color: rgba(24, 49, 83, 0.831372549);
+  }
+}
+
+aside .briefDesc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 90%;
+  border: solid #fff 0.5px;
+  border-radius: 10px;
+  padding: 5px;
+  overflow: hidden;
+}
+@media (hover: hover) and (pointer: fine) {
+  aside .briefDesc:hover {
+    cursor: pointer;
+  }
+}
+aside .briefDesc p {
+  width: 200px;
+  max-height: 1lh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,151 @@
+//Header
+header {
+
+    //Logo
+    .title {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+
+        h1 {
+            margin: 0;
+            // text-wrap: nowrap;
+        }
+
+        img {
+            width: 50px;
+        }
+    }
+
+    //Botón borrar
+    .clean {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 10px;
+
+        button {
+            @include buttonStyle;
+            text-wrap: nowrap;
+        }
+
+    }
+}
+
+//Main
+main {
+
+    //contenedor de mensajes
+    .messageContainer {
+        box-sizing: border-box;
+        height: 100%;
+        border: $thirdthColor solid 2px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+        overflow-y: auto;
+        min-height: 0;
+
+        // Automaticamente hacer scroll hacia abajo cuando se agregan mensajes
+        scroll-behavior: smooth;
+
+
+        .right {
+            @include messages(end)
+        }
+
+        .left {
+            @include messages(flex-start, $secondaryColor)
+        }
+    }
+
+    //formulario principal
+    .mainForm {
+        height: 100px;
+        border: $thirdthColor solid 2px;
+        border-radius: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: $thirdthColor;
+        /* position: fixed;
+        width: 100%;
+        padding: 10px;
+        left: 0;
+        bottom: 10px; */
+
+
+
+        form {
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+            grid-gap: 10px;
+            place-items: center;
+        }
+
+        label,
+        input {
+            grid-column: 1/2;
+            width: 100%;
+        }
+
+        label {
+            text-wrap: nowrap;
+        }
+
+        input {
+            height: 100%;
+            border-radius: 10px;
+            background-color: #18315375;
+            color: #fff;
+            border: solid #fff .5px;
+            padding-left: 5px;
+        }
+
+        button {
+            grid-column: 2/3;
+            width: 70px;
+            @include buttonStyle;
+            border: $secondaryColor solid 1px;
+
+            @media (hover:hover) and (pointer: fine) {
+                &:hover {
+                    background-color: $primaryColor;
+                }
+            }
+        }
+    }
+}
+
+//aside
+aside {
+    .briefDesc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 90%;
+        border: solid #fff .5px;
+        border-radius: 10px;
+        padding: 5px;
+        overflow: hidden;
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        p {
+            width: 200px;
+            max-height: 1lh;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+}

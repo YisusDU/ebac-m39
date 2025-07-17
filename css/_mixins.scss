@@ -1,0 +1,39 @@
+//mixins
+
+//Buttons
+@mixin buttonStyle {
+    background-color: transparent;
+    padding: 5px;
+    transition: all .2s ease-in-out;
+    border: transparent solid 1px;
+    border-radius: 10px;
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            border: $secondaryColor solid 1px;
+            cursor: pointer;
+        }
+
+        &:active {
+            scale: .95;
+        }
+
+    }
+}
+
+//messages
+@mixin messages($position: end, $bGColor: $thirdthColor) {
+    width: 50%;
+    align-self: $position;
+    background-color: $bGColor;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: if($position ==end, start, end);
+    align-items: center;
+
+    p {
+        width: 90%;
+    }
+}
