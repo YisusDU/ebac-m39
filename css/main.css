@@ -23,11 +23,17 @@ header {
   justify-content: space-between;
   padding: 10px;
   box-sizing: border-box;
+  border-bottom: solid rgba(0, 187, 255, 0.7294117647) 2px;
+  background-color: #261854;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: -webkit-fill-available;
 }
 
 main {
-  border: solid rgba(0, 187, 255, 0.7294117647) 2px;
-  height: calc(100dvh - 99px);
+  margin-top: 99px;
+  /*  height: calc(100dvh - 99px); */
   box-sizing: border-box;
   padding: 10px;
   display: grid;
@@ -74,7 +80,6 @@ header .clean button {
 main .messageContainer {
   box-sizing: border-box;
   height: 100%;
-  border: #261854 solid 2px;
   border-radius: 10px;
   display: flex;
   flex-direction: column-reverse;
@@ -121,11 +126,10 @@ main .mainForm {
   padding: 10px;
   box-sizing: border-box;
   background-color: #261854;
-  /* position: fixed;
-  width: 100%;
-  padding: 10px;
+  position: fixed;
+  bottom: 0;
   left: 0;
-  bottom: 10px; */
+  width: -webkit-fill-available;
 }
 main .mainForm form {
   display: grid;

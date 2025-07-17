@@ -23,12 +23,18 @@ header {
     justify-content: space-between;
     padding: 10px;
     box-sizing: border-box;
+    border-bottom: solid $secondaryColor 2px;
+    background-color: $thirdthColor;
 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: -webkit-fill-available;
 }
 
 main {
-    border: solid $secondaryColor 2px;
-    height: calc(100dvh - 99px);
+    margin-top: 99px;
+   /*  height: calc(100dvh - 99px); */
     box-sizing: border-box;
     padding: 10px;
     display: grid;
