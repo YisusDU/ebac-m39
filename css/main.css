@@ -12,6 +12,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(24, 49, 83, 0.831372549);
   box-sizing: border-box;
 }
@@ -33,7 +35,8 @@ header {
 
 main {
   margin-top: 99px;
-  /*  height: calc(100dvh - 99px); */
+  width: 80%;
+  max-width: 900px;
   box-sizing: border-box;
   padding: 10px;
   display: grid;

@@ -13,7 +13,7 @@ const addQuestion = (input) => {
 
     //add the new message to the container
     messageContainer.prepend(newQuestion);
-    console.log("contenedor agregado");
+    // console.log("contenedor agregado");
 }
 
 
@@ -125,14 +125,14 @@ const addResponse = (input) => {
 
     newResponse.appendChild(responseContent);
     messageContainer.prepend(newResponse);
-    console.log("Repuesta añadida")
+    // console.log("Repuesta añadida")
 }
 
 //Función para capturar la entrada del usuario
 const validateInput = () => {
     const input = document.querySelector("input").value.trim();
 
-    console.log(input);
+    // console.log(input);
     if (input) {
         addQuestion(input);
         addResponse(input);
