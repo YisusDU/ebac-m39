@@ -1,88 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/main.css" />
-    <title>Chatsito</title>
-  </head>
-  <body>
-    <header>
-      <section class="title">
-        <img src="assets/Chatsito.png" alt="Logo de Chatsito" />
-        <h1>Bienvenido a Chatsito</h1>
-      </section>
 
-      <section class="clean">
-        <button
-          name="cleanChat"
-          id="cleanChat"
-          aria-label="Borrar chat actual"
-          title="Borrar chat actual"
-        >
-          <img
-            src="assets/trash-solid.svg"
-            alt="Borrar chat actual"
-            aria-hidden="true"
-          />
-          <p for="cleanChat">Borrar chat actual</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/main.css" />
+  <title>Chatsito</title>
+</head>
+
+<body>
+  <script src="js/scripts.js" defer></script>
+  <header>
+    <section class="title">
+      <img src="assets/Chatsito.png" alt="Logo de Chatsito" />
+      <h1>Bienvenido a Chatsito</h1>
+    </section>
+
+    <section class="clean">
+      <button name="cleanChat" id="cleanChat" aria-label="Borrar chat actual" title="Borrar chat actual">
+        <img src="assets/trash-solid.svg" alt="Borrar chat actual" aria-hidden="true" />
+        <p for="cleanChat">Borrar chat actual</p>
+      </button>
+    </section>
+  </header>
+  <main>
+    <!--Contendor de mensajes-->
+    <section id="messageContainer" class="messageContainer">
+      <div class="left">
+        <p>Tu respuesta por el pequeño chat</p>
+      </div>
+      <div class="right">
+        <p>Tu pregunta al pequeño chat que es muuuuuuuuy larga</p>
+      </div>
+    </section>
+
+    <!--Formulario de cuestiones-->
+    <section id="mainForm" class="mainForm">
+      <form action="#">
+        <label for="">¡Pregunta algo a Chatsito!</label>
+        <input type="text" placeholder="Escribe algo..." required />
+        <button type="submit">
+          <img src="assets/searchengin-brands.svg" alt="Enviar pregunta al chat" />
         </button>
-      </section>
-    </header>
-    <main>
-      <!--Contendor de mensajes-->
-      <section class="messageContainer">
-        <div class="left">
-          <p>Tu respuesta por el pequeño chat</p>
-        </div>
-        <div class="right">
-          <p>Tu pregunta al pequeño chat que es muuuuuuuuy larga</p>
-        </div>
-        <div class="left">
-          <p>Tu respuesta por el pequeño chat</p>
-        </div>
-        <div class="right">
-          <p>Tu pregunta al pequeño chat que es muuuuuuuuy larga</p>
-        </div>
-        <div class="left">
-          <p>Tu respuesta por el pequeño chat</p>
-        </div>
-        <div class="right">
-          <p>Tu pregunta al pequeño chat que es muuuuuuuuy larga</p>
-        </div>
-        <div class="left">
-          <p>Tu respuesta por el pequeño chat</p>
-        </div>
-        <div class="right">
-          <p>Tu pregunta al pequeño chat que es muuuuuuuuy larga</p>
-        </div>
-        <div class="left">
-          <p>Tu respuesta por el pequeño chat</p>
-        </div>
-        <div class="right">
-          <p>Tu pregunta al pequeño chat que es muuuuuuuuy larga</p>
-        </div>
-        <div class="left">
-          <p>Tu respuesta por el pequeño chat</p>
-        </div>
-        <div class="right">
-          <p>Tu pregunta al pequeño chat que es muuuuuuuuy larga</p>
-        </div>
-      </section>
+      </form>
+    </section>
+  </main>
+</body>
 
-      <!--Formulario de cuestiones-->
-      <section class="mainForm">
-        <form action="#">
-          <label for="">¡Pregunta algo a Chatsito!</label>
-          <input type="text" placeholder="Escribe algo..." />
-          <button type="submit">
-            <img
-              src="assets/searchengin-brands.svg"
-              alt="Enviar pregunta al chat"
-            />
-          </button>
-        </form>
-      </section>
-    </main>
-  </body>
 </html>
